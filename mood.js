@@ -2,8 +2,10 @@
 // Your Name
 // Date
 
-let userName = "Miguel";
+let userName = "Taylor";
 let moodToday = "happy";
+
+//
 
 function respondToMood(name, mood) {
   console.log("Hi " + name + "!");
@@ -12,7 +14,7 @@ function respondToMood(name, mood) {
     console.log("That’s awesome. Keep it going!");
   } else if (mood === "tired") {
     console.log("Don’t forget to rest. You’ve earned it.");
-  } else if (mood === "frustrated") {
+  } else if (mood === "exhausted") {
     console.log("Take a breath. Better days are ahead.");
   } else {
     console.log("Thanks for checking in. Keep being you.");
@@ -25,4 +27,17 @@ for (let i = 0; i < 3; i++) {
   console.log("You've got this, " + name + "!");
 }
 
+function getMoodMessage(name, mood) {
+  let message = "Hey " + name+ "! ";
 
+  if (mood === "happy") {
+    message += "Keep smiling!";
+  } else {
+    message += "You're doing your best. That matters.";
+  }
+
+  return message;
+}
+
+let finalMessage = getMoodMessage("Jordan", "stressed");
+console.log(finalMessage);
